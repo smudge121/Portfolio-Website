@@ -1,5 +1,6 @@
 :root {
     --backgroundColor:rgb(40, 53, 62);
+    --translucentColor:rgba(40, 53, 62,0.4);
     --contrastColor:rgb(236, 231, 211);
 }
 
@@ -26,9 +27,70 @@ nav a {
 
 main {
     margin-top: 100px;
+    width: 100%;
+    background-color: bisque;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+.row-container {
+    display: flex;
+    flex-direction: row;
 }
 
 #Homework {
     width: 760px;
     height: auto;
+}
+
+#bio {
+    width: 80%;
+    height: 125px;
+    margin-left:150px;
+    margin-right: 150px;
+    padding-left:50px;
+    padding-right: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: aqua;
+    border-radius: 25px;
+}
+#divider {
+    width: 100%;
+    border-bottom: 5px solid var(--backgroundColor);
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.card {
+    width:45%;
+    order: -1;
+    
+}
+.card img {
+    width: 500px;
+    height: 300px;
+}
+figure {
+    position: relative;
+}
+figure img {
+    width:100%;
+    border-radius: 25px;
+}
+.cardTitle {
+    position: absolute;
+    background-color: var(--translucentColor);
+    font-size: xx-large;
+
+    top: 10px;
+    left: 25px;
+}
+.cardDate {
+    position:absolute;
+    background-color: var(--translucentColor);
+    font-size: xx-large;
+
+    bottom: 10px;
+    right: 25px;
 }
