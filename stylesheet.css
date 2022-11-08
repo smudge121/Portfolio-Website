@@ -3,7 +3,7 @@
     --medium:#624F82;
     --light:#9F73AB;
     --highlight:#A3C7D6;
-    --translucent: rgba(63, 59, 108, 0.4);
+    --translucent: rgba(63, 59, 108, 0.6);
 }
 
 * {
@@ -34,7 +34,6 @@ nav h1 {
     position: absolute;
     left:15px;
     font-size: 40px;
-    /* z-index:-5 ; */
 }
 nav a {
     padding-right: 25px;
@@ -56,10 +55,12 @@ nav a:active {
     border:none;
 }
 
+/*  MAIN BODY  */
+
 main {
     margin-top: 100px;
     width: 100%;
-    background-color: var(--light);
+    /* background-color: var(--light); */
     display:flex;
     flex-direction:column;
     align-items: center;
@@ -68,16 +69,43 @@ main {
 header {
     width: 100%;
     padding: 25px;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    /* row-gap: 75px; */
+    z-index: 2;
+    color:var(--highlight);
+}
+header em {
+    font-style: normal;
 }
 header section {
     text-align: left;
     justify-content:  center;
 }
+header h2 {
+    font-size: 40px;
+    width: 100%;
+    text-align: left;
+    padding-left: 30px;
+    border-bottom: 4px solid var(--highlight);
+}
 header section ul li {
     margin-top:25px;
+    font-size: 20px;
+}
+header a {
+    color: var(--light);
+}
+header a:hover {
+    color: var(--medium);
 }
 
+img {
+    padding: 10px;
+    background-color: var(--medium);
+    border-radius: 25px;
+    border: 3px solid var(--dark);
+    box-shadow: inset 0 0 10px var(--dark);
+}
 #portrait {
     height: 450px;
 }
@@ -99,7 +127,7 @@ header section ul li {
 
 #bio {
     width: 80%;
-    height: 125px;
+    height: 85px;
     margin-left:150px;
     margin-right: 150px;
     padding-left:50px;
@@ -108,18 +136,51 @@ header section ul li {
     padding-bottom: 25px;
     background-color: var(--medium);
     border-radius: 25px;
+
+    color:var(--highlight);
+}
+#synopsis {
+    width: 80%;
+    margin-left:150px;
+    margin-right: 150px;
+    padding-left:50px;
+    padding-right: 50px;
+    padding-bottom: 25px;
+
+    text-align: right;
+    color:var(--highlight);
 }
 #divider {
     width: 100%;
-    border-bottom: 5px solid var(--dark);
+    
     margin-bottom: 25px;
     margin-top: 25px;
+    border-bottom: 5px dashed var(--light);
+    box-shadow: 0px 10px 15px var(--medium);
 }
+
+#centerImage p {
+    flex-wrap: wrap;
+    font-size: 40px;
+    text-align: right;
+    color:var(--highlight)
+}
+#centerImage figcaption {
+    /* color:var(--light); */
+    font-size: 30px;
+}
+
 
 .card {
     width:45%;
-    /* order: -1; */
-    
+}
+.card div {
+    background-color: var(--highlight);
+    border-radius: 25px;
+    height:90%;
+}
+.card div:hover {
+    opacity: 0.5;;
 }
 .card img {
     width: 500px;
@@ -136,15 +197,23 @@ figure img {
     position: absolute;
     background-color: var(--translucent);
     font-size: xx-large;
+    border-radius: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 20px;
 
-    top: 10px;
+    top: 15px;
     left: 25px;
 }
 .cardDate {
     position:absolute;
     background-color: var(--translucent);
     font-size: xx-large;
+    border-radius: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 20px;
 
-    bottom: 10px;
+    bottom: 20px;
     right: 25px;
 }
